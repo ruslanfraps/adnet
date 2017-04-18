@@ -74,7 +74,7 @@ class Page extends ActiveRecord
             'slug' => Yii::t('common', 'Slug'),
             'title' => Yii::t('common', 'Title'),
             'body' => Yii::t('common', 'Body'),
-            'imageFile' => Yii::t('common', 'ImageFile'),
+         /*   'image_file' => Yii::t('common', 'Image File'),*/
             'view' => Yii::t('common', 'Page View'),
             'status' => Yii::t('common', 'Active'),
             'created_at' => Yii::t('common', 'Created At'),

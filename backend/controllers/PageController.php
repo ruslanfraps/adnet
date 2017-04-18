@@ -67,7 +67,7 @@ class PageController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
-            $upload_file->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            $upload_file->image_file = UploadedFile::getInstance($upload_file, 'image_file');
 
             return $this->render('create', [
                 'model' => $model,
@@ -85,12 +85,15 @@ class PageController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $upload_file = new UploadForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
+            $upload_file->image_file = UploadedFile::getInstance($upload_file, 'image_file');
             return $this->render('update', [
                 'model' => $model,
+                'upload_file' => $upload_file,
             ]);
         }
     }

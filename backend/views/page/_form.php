@@ -13,7 +13,7 @@ use yii\bootstrap\ActiveForm;
     <?/*php $form = ActiveForm::begin(); */?>
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
-    <?php echo $form->field($upload_file, 'imageFile')->fileInput() ?>
+    <?php echo $form->field($upload_file, 'image_file')->fileInput() ?>
 
     <?php echo $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
